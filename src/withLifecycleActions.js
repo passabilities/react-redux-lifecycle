@@ -47,7 +47,7 @@ export const withLifecycleActions = lifecycleActions => {
           .forEach(
             lifecycleActionKey =>
               (this[lifecycleActionKey] = () =>
-                handleAction(lifecycleActions[lifecycleActionKey], this.props.dispatch, this.getPassThroughProps()))
+                handleAction(lifecycleActions[lifecycleActionKey], this.props.dispatch))
           )
       }
 

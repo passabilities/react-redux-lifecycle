@@ -1,8 +1,8 @@
-const handleAction = (action, dispatch, props) => {
+const handleAction = (action, dispatch) => {
   if (typeof action === 'function') {
-    dispatch(action(props))
+    dispatch(action())
   } else if (Array.isArray(action)) {
-    action.forEach(a => handleAction(a, dispatch, props))
+    action.forEach(a => handleAction(a, dispatch))
   } else {
     dispatch(action)
   }
